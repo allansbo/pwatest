@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Deletar tarefa{% endblock %}
+{% block content_title %}Tarefa: {{ task.title }}{% endblock %}
+
+{% block content %}
+<div class="card-body mb-4 col-md-8">
+    <ul>
+        <li>
+            <small class="form-text text-muted">Data de início: {{ task.start_date }}</small>
+        </li>
+        {% if task.end_date == None %}
+        <li>
+            <small class="form-text text-muted">Data de término: Em aberto</small>
+        </li>
+        {% else %}
+        <li>
+            <small class="form-text text-muted">Data de término: {{ task.end_date }}</small>
+        </li>
+        {% endif %}
+    </ul>
+
+    <form method="post" action="{% url 'tasks:delete' task.id %}" novalidate>
+        {% csrf_token %}
+        <div class="mb-3">
+            <p>Tem certeza que deseja remover essa tarefa?</p>
+        </div>
+        <div class="mb-3">
+            <a href="{% url 'tasks:list' %}" class="btn btn-secondary btn-md">
+                Cancelar
+            </a>
+            <input type="submit" class="btn btn-danger btn-md" value="Confirmar">
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -42,10 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 3rd apps
-    'pwa_webpush',
+    'widget_tweaks',
+    'phonenumber_field',
+    'pwa',
 
     # local apps
     'core.notification.apps.NotificationConfig',
+    'core.contacts.apps.ContactsConfig',
+    'core.tasks.apps.TasksConfig',
+    'core.accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,19 +141,26 @@ MEDIA_URL = 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Django PWA Webpush
+# PWA Settings
 
-PWA_APP_NAME = 'My App'
-PWA_APP_DESCRIPTION = "My app description"
-PWA_APP_THEME_COLOR = '#0A0302'
+PWA_APP_NAME = 'PWA GPR Sistemas'
+PWA_APP_DESCRIPTION = "Testando a funcionalidade de PWA"
+PWA_APP_THEME_COLOR = '#004373'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'
-PWA_APP_SCOPE = 'https://pwatest-jtsl.onrender.com/',
+PWA_APP_SCOPE = '/'
 PWA_APP_ORIENTATION = 'any'
-PWA_APP_START_URL = 'https://pwatest-jtsl.onrender.com/'
+PWA_APP_START_URL = '/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
 PWA_APP_ICONS = [
     {
         'src': '/static/images/my_app_icon.png',
+        'sizes': '160x160'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/images/my_apple_icon.png',
         'sizes': '160x160'
     }
 ]
@@ -159,10 +171,5 @@ PWA_APP_SPLASH_SCREEN = [
     }
 ]
 PWA_APP_DIR = 'ltr'
-PWA_APP_LANG = 'en-US'
+PWA_APP_LANG = 'pt-br'
 
-WEBPUSH_SETTINGS = {
-    "VAPID_PUBLIC_KEY": "Vapid Public Key",
-    "VAPID_PRIVATE_KEY":"Vapid Private Key",
-    "VAPID_ADMIN_EMAIL": "allan.oliveira@gpr.com.br"
-}

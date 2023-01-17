@@ -19,7 +19,11 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', include('core.notification.urls', namespace='notifications')),
-    path('', include('pwa_webpush.urls')),
+    path('', include('pwa.urls')),
+    path('contacts/', include('core.contacts.urls', namespace='contacts')),
+    path('tasks/', include('core.tasks.urls', namespace='tasks')),
+    path('accounts/', include('core.accounts.urls', namespace='accounts')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
 ]
 
