@@ -175,7 +175,7 @@ PWA_APP_LANG = 'pt-br'
 
 # py webpush
 WEBPUSH_SETTINGS = {
-    "VAPID_PUBLIC_KEY": "BLz1hc0EPdckoZA5TTbK154oOx09R2uAlApaDFtGH2Khlf3OA3SW2S5RcCgc-pE1WEL-YmGHLUTztGohrspyoxI",
-    "VAPID_PRIVATE_KEY": "DbIECpPEeKtmhB908oMmUAOlndBvXZ0S_utkUuVZPUI",
-    "VAPID_ADMIN_EMAIL": "allan.oliveira@gpr.com.br"
+    "VAPID_PUBLIC_KEY": config('VAPID_PUBLIC_KEY'),
+    "VAPID_PRIVATE_KEY": config('VAPID_PRIVATE_KEY'),
+    "VAPID_ADMIN_EMAIL": config('VAPID_ADMIN_EMAIL')
 }
