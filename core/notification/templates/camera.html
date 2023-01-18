@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}PWA Tests{% endblock %}
+{% block content_title %}Camera{% endblock %}
+{% block content_description %}Teste de acesso a camera do dispositivo{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12 mb-4">
+        <video id='video'></video>
+        <canvas id='canvas'></canvas>
+        <button class="btn btn-primary" id='capture'>Capturar</button>
+    </div>
+</div>
+<div class="row">
+    <div class="mb-3" id="mapholder">
+    </div>
+</div>
+
+{% endblock content %}
+{% block extrajs %}
+<script>
+    navigator.mediaDevices.getUserMedia({video: true}).then(function (mediaStream) {
+        const video = document.querySelector('#video');
+        video.srcObject = mediaStream;
+        video.play();
+    });
+
+    document.querySelector('#capture').addEventListener('click', function (e) {
+        var canvas = document.querySelector("#canvas");
+        canvas.height = video.videoHeight;
+        canvas.width = video.videoWidth;
+        var context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0)
+    })
+</script>
+{% endblock extrajs %}

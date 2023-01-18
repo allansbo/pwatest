@@ -10,3 +10,8 @@ def home(request):
 @login_required
 def geolocation(request):
     return render(request, 'geolocation.html')
+
+
+@login_required
+def camera(request):
+    return render(request, 'camera.html')
