@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'phonenumber_field',
     'pwa',
+    'webpush',
 
     # local apps
     'core.notification.apps.NotificationConfig',
@@ -171,3 +172,10 @@ PWA_APP_SPLASH_SCREEN = [
 ]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'pt-br'
+
+# py webpush
+WEBPUSH_SETTINGS = {
+    "VAPID_PUBLIC_KEY": "BLz1hc0EPdckoZA5TTbK154oOx09R2uAlApaDFtGH2Khlf3OA3SW2S5RcCgc-pE1WEL-YmGHLUTztGohrspyoxI",
+    "VAPID_PRIVATE_KEY": "DbIECpPEeKtmhB908oMmUAOlndBvXZ0S_utkUuVZPUI",
+    "VAPID_ADMIN_EMAIL": "allan.oliveira@gpr.com.br"
+}
