@@ -15,3 +15,8 @@ def geolocation(request):
 @login_required
 def camera(request):
     return render(request, 'camera.html')
+
+
+@login_required
+def notification(request):
+    return render(request, 'notification.html')
