@@ -30,3 +30,8 @@ def notification(request):
         send_user_notification(user=request.user, payload=payload, ttl=1000)
 
     return render(request, 'notification.html')
+
+
+@login_required
+def inputs(request):
+    return render(request, 'inputs.html')

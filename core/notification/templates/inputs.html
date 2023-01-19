@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% block title %}PWA Tests{% endblock %}
+{% block content_title %}Inputs html{% endblock %}
+{% block content_description %}Teste de inputs html{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                inputmode=text (default)
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                inputmode=numeric
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="text" inputmode="numeric" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                inputmode=tel
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="text" inputmode="tel">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                inputmode=decimal
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="text" inputmode="decimal" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                inputmode=email
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="email" inputmode="email">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                inputmode=url
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="url" inputmode="url" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                inputmode=search
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="search" inputmode="search">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                inputmode=none
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="text" inputmode="none">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=date
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="date" name="" id="">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=datetime
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="datetime" name="" id="">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=datetime-local
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="datetime-local" name="" id="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=month
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="month" name="" id="">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=week
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="week" name="" id="">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=time
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="time" name="" id="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=checkbox
+            </div>
+            <div class="card-body">
+                <fieldset>
+                  <input type="checkbox" id="scales" name="scales" checked>
+                  <label for="scales">A</label>
+                  <input type="checkbox" id="horns" name="horns">
+                  <label for="horns">B</label>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=radio
+            </div>
+            <div class="card-body">
+                <input type="radio" id="html" name="fav_language" value="HTML" checked>
+                <label for="html">HTML</label>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=range
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="range">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=file
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="file" name="" id="">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=color
+            </div>
+            <div class="card-body">
+                <input type="color" name="" id="">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                type=password
+            </div>
+            <div class="card-body">
+                <input class="form-control" type="password">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
