@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'pwa',
     'webpush',
+    'push_notifications',
 
     # local apps
     'core.notification.apps.NotificationConfig',
@@ -178,4 +179,8 @@ WEBPUSH_SETTINGS = {
     "VAPID_PUBLIC_KEY": config('VAPID_PUBLIC_KEY'),
     "VAPID_PRIVATE_KEY": config('VAPID_PRIVATE_KEY'),
     "VAPID_ADMIN_EMAIL": config('VAPID_ADMIN_EMAIL')
+}
+
+PUSH_NOTIFICATIONS_SETTINGS = {
+    "FCM_API_KEY": config('FCM_API_KEY'),
 }
