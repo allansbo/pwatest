@@ -144,6 +144,7 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # PWA Settings
 
+PWA_APP_DEBUG_MODE = False
 PWA_APP_NAME = 'PWA GPr Sistemas'
 PWA_APP_DESCRIPTION = "Testando a funcionalidade de PWA"
 PWA_APP_THEME_COLOR = '#004373'
