@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os.path
 from pathlib import Path
 
 from decouple import config
@@ -174,6 +174,8 @@ PWA_APP_SPLASH_SCREEN = [
 ]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'pt-br'
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'notification/static/js/serviceworker.js')
 
 # py webpush
 WEBPUSH_SETTINGS = {
