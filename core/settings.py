@@ -175,7 +175,7 @@ PWA_APP_SPLASH_SCREEN = [
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'pt-br'
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'notification/static/js/serviceworker.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'core/notification/static/js/serviceworker.js')
 
 # py webpush
 WEBPUSH_SETTINGS = {
