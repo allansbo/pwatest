@@ -1,4 +1,5 @@
 {% load static %}
+{% load pwa %}
 {% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,6 +12,7 @@
         <title>Login - myDjangoProject</title>
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        {% progressive_web_app_meta %}
     </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
