@@ -13,14 +13,30 @@
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         {% progressive_web_app_meta %}
-        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-        <script>
-            window.OneSignal = window.OneSignal || [];
-            OneSignal.push(function() {
-                OneSignal.init({
-                appId: "e797527d-62c5-47a2-b1d3-f12b1409326a",
-                });
+
+        <script TYPE="text/javascript">
+        // Initialize the service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/OneSignalSDKWorker.js', {
+                scope: '/'
+            }).then(function (registration) {
+                // Registration was successful
+
+            }, function (err) {
+                // registration failed :(
+
             });
+        }
+    </script>
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+            appId: "b1dca2bc-f037-47f4-af6f-ce2303d6e0e9",
+            });
+        });
         </script>
     </head>
     <body class="sb-nav-fixed">
@@ -53,15 +69,6 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Apps</div>
-                            <a class="nav-link" href="{% url 'tasks:list' %}">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-list-check"></i></div>
-                                Tarefas
-                            </a>
-                            <a class="nav-link" href="{% url 'contacts:list' %}">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-address-book"></i></div>
-                                Contatos
-                            </a>
                             <div class="sb-sidenav-menu-heading">PWA Tests</div>
                             <a class="nav-link" href="{% url 'notifications:geolocation' %}">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-map"></i></div>

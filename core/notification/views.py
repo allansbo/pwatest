@@ -1,11 +1,21 @@
+import os.path
+
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render
 from webpush import send_user_notification
+
+from core import settings
 
 
 @login_required
 def home(request):
     return render(request, 'index.html')
+
+
+def service_worker(request):
+    sw_path = os.path.join(settings.BASE_DIR, 'core/notification/static/js/OneSignalSDKWorker.js')
+    return HttpResponse(open(sw_path).read(), content_type='application/javascript')
 
 
 @login_required

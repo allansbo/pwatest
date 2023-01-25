@@ -50,8 +50,6 @@ INSTALLED_APPS = [
 
     # local apps
     'core.notification.apps.NotificationConfig',
-    'core.contacts.apps.ContactsConfig',
-    'core.tasks.apps.TasksConfig',
     'core.accounts.apps.AccountsConfig',
 ]
 
@@ -137,8 +135,6 @@ MEDIA_URL = 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-PHONENUMBER_DEFAULT_REGION = 'BR'
-
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
 
@@ -174,8 +170,6 @@ PWA_APP_SPLASH_SCREEN = [
 ]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'pt-br'
-
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'core/notification/static/js/serviceworker.js')
 
 # py webpush
 WEBPUSH_SETTINGS = {
