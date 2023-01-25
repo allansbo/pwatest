@@ -6,7 +6,7 @@ app_name = 'notifications'
 
 urlpatterns = [
     path('', home, name='home'),
-    path('OneSignalSDKWorker.js', service_worker),
+    path('push/onesignal/OneSignalSDKWorker.js', service_worker),
     path('geolocation/', geolocation, name='geolocation'),
     path('camera/', camera, name='camera'),
     path('notification/', notification, name='notification'),
